@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="card">
+    <h1>{{ title }}</h1>
+    <!-- Form which takes the inputs and displays the outputs -->
+    <form [formGroup]="emiForm">
+      <div class="form">
+        <label for="loanAmount">Loan Amount (in Rupees)</label>
+        <input
+          id="loanAmount"
+          type="number"
+          formControlName="loanAmount"
+          placeholder="Enter loan amount"
+          class="form-control"
+        />
+        <small *ngIf="emiForm.get('loanAmount')?.invalid && emiForm.get('loanAmount')?.touched" class="error">
+          Please enter a valid loan amount
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label for="yearlyInterestRate">Yearly Interest Rate (%)</label>
+        <input
+          id="yearlyInterestRate"
+          type="number"
+          formControlName="yearlyInterestRate"
+          placeholder="Enter yearly interest rate"
+          step="0.01"
+          class="form-control"
+        />
+        <small *ngIf="emiForm.get('yearlyInterestRate')?.invalid && emiForm.get('yearlyInterestRate')?.touched" class="error">
+          Please enter a valid interest rate
+        </small>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="loanTermYears">Loan Term (Years)</label>
+        <input
+          id="loanTermYears"
+          type="number"
+          formControlName="loanTermYears"
+          placeholder="Enter loan term in years"
+          class="form-control"
+        />
+        <small *ngIf="emiForm.get('loanTermYears')?.invalid && emiForm.get('loanTermYears')?.touched" class="error">
+          Please enter a valid loan term
+        </small>
+      </div>
+      <button type="button" (click)="onCalculateClick()" class="btn btn-primary">
+        Calculate EMI
+      </button>
+    </form>
+
+    <div *ngIf="errorMsg" class="alert alert-error">
+      {{ errorMsg }}
+    </div>
+
+    <div *ngIf="emi !== null" class="result">
+      <h2>EMI Summary</h2>
+      <div class="result-item">
+        <label>Monthly EMI:</label>
+        <div class="emi-amount">Rs. {{ emi }}</div>
+      </div>
+      <div class="result-item">
+        <label>Total Interest Amount:</label>
+        <div class="amount">Rs. {{ interestAmount }}</div>
+      </div>
+      <div class="result-item">
+        <label>Total Amount Payable:</label>
+        <div class="amount">Rs. {{ totalPayable }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet />

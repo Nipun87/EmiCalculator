@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+h2 {
+  color: #667eea;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.form{
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.error {
+  display: block;
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px 60px;
+  margin-left: 150px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background: #764ba2;
+  color: white;
+}
+
+.btn-primary:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.alert {
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.alert-error {
+  background-color: #fdeaea;
+  color: #c53030;
+  text-align: center;
+}
+
+.result {
+  margin-top: 30px;
+  padding: 25px;
+  background: seashell;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #e0e7ff;
+}
+
+.result h2 {
+  margin-top: 0;
+}
+
+.emi-amount {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 15px 0;
+  /* color: #764ba2; */
+}
+
+.result-item {
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  /* border-left: 4px solid #667eea; */
+}
+
+
+
+
