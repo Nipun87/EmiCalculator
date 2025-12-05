@@ -230,35 +230,6 @@ The backend returns `IllegalArgumentException` messages for invalid inputs:
 ### Frontend Error Handling
 The frontend displays user-friendly error messages and validates inputs before sending requests to the backend.
 
-## Development
-
-### Running Tests
-
-**Backend**:
-```bash
-cd Backend
-./mvnw test
-```
-
-**Frontend**:
-```bash
-cd Frontend
-npm test
-```
-
-### Build for Production
-
-**Backend**:
-```bash
-cd Backend
-./mvnw clean package
-```
-
-**Frontend**:
-```bash
-cd Frontend
-ng build --configuration production
-```
 
 ## Project Structure Details
 
@@ -301,44 +272,3 @@ ng build --configuration production
 - Safari (latest)
 - Edge (latest)
 
-## Future Enhancements
-
-- Add amortization schedule display
-- Support for multiple currencies
-- Graphical representation of EMI breakdown
-- PDF export of calculation details
-- Mobile application
-- Database integration for saving calculations
-- User authentication
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Support
-
-For issues, questions, or suggestions, please create an issue in the repository.
-
-## Author
-
-**Nipun87** - GitHub Profile
-
-## Acknowledgments
-
-- Spring Boot Documentation
-- Angular Documentation
-- Bootstrap for responsive design components
-
-## Version History
-
-- **v1.0.0** (December 5, 2025) - Initial release with Frontend and Backend consolidation
-  - Added Frontend and Backend in single main branch
-  - Implemented EMI, Interest Amount, and Total Payable Amount calculations
